@@ -49,6 +49,7 @@ CUSTOM STYLING
 ._post-tags {
     float: left;
     margin-right: 15px;
+    list-style-type: none;
 }
 
 ._post-tags > img {
