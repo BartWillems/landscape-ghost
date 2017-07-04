@@ -39,6 +39,9 @@ http://commons.wikimedia.org/wiki/File:Adams_The_Tetons_and_the_Snake_River.jpg
 /*
 CUSTOM STYLING
 */
+.index-header {
+    height: 410px !important;
+}
 .post-tags-holder {
     width: 960px;
     /*margin-left: auto;*/
@@ -55,6 +58,10 @@ CUSTOM STYLING
 ._post-tags > img {
     max-height: 300px;
 }
+
+/*._post-tags:hover {
+   transform: rotateX(150deg);
+ }*/
 
 .tag-title {
     transition:0.5s ease;
@@ -107,6 +114,7 @@ summary { display: block; }
 audio, canvas, video { display: inline-block; }
 audio:not([controls]) { display: none; height: 0; }
 [hidden], template { display: none; }
+
 html {
    font-family: sans-serif;
    -ms-text-size-adjust: 100%;
@@ -743,9 +751,10 @@ margin on the iframe, cause it breaks stuff. */
 
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
+    margin-top: 15px;
     position: relative;
     width: 80%;
-    max-width: 1000px;
+    /*max-width: 90%;*/
     margin: 4rem auto;
     padding-bottom: 4rem;
     border-bottom: 1px solid #e6e6e6;
@@ -849,7 +858,7 @@ margin on the iframe, cause it breaks stuff. */
 
 /* Tweak the .post wrapper style */
 .post-template .post {
-    margin-top: 0;
+    margin-top: 30px;
     border-bottom: none;
     padding-bottom: 0;
 }

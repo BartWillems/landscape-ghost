@@ -20,9 +20,11 @@
 </head>
 <body class="{{body_class}}">
 
-<!-- <header class="site-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
--->
-<header class="site-head" style="background-image: url({{@blog.cover}})"> 
+{{#is "home"}}
+<header class="site-head index-header" style="background-image: url({{@blog.cover}});background-repeat: repeat;background-size: inherit;"> 
+{{else}}
+<header class="site-head"> 
+{{/is}}
     <nav role="navigation" class="site-navigation main-navigation">
         <!-- <div class="menu-main-container"> -->
         <ul id="menu-main" class="menu">
@@ -31,7 +33,7 @@
                 {{#if @blog.logo}}
                 <img src="{{@blog.logo}}" alt="Blog Logo" style="max-height:16px;" />
                 {{/if}}
-                <a href="{{@blog.url}}">{{@blog.title}}</a>
+                <a href="{{@blog.url}}">Fox&amp;Raven</a>
             </li>
             <li>
                 <a href="#">BXL</a>
@@ -45,25 +47,31 @@
     <div class="vertical">
         <ul class="post-tags-holder">
             <li class="_post-tags">
+                <a href="/tag/we-want-you">
                 <div class="tag-image">
-                    <div class="tag-title-div" style="background: url(/assets/img/dr-phil1.jpg);">
-                        <p class="tag-title-p">We want You!</p>
+                    <div class="tag-title-div" style="background: url(/assets/img/Serres-Royale.jpg);">
+                        <p class="tag-title-p">Serres Royales</p>
                     </div>
                 </div>
+                </a>
             </li>
             <li class="_post-tags">
+                <a href="/tag/my-hands">
                 <div class="tag-image">
-                    <div class="tag-title-div" style="background: url(/assets/img/Dr-phil.jpg);">
+                    <div class="tag-title-div" style="background: url(/assets/img/eXHEbisionist.png);">
                         <p class="tag-title-p">Look at my hands!</p>
                     </div>
                 </div>
+                </a>
             </li>
             <li class="_post-tags">
+                <a href="/tag/crossed-are-these-arms">
                 <div class="tag-image">
                     <div class="tag-title-div" style="background: url(/assets/img/DrPhil__120910180727.jpg);">
                         <p class="tag-title-p">My arms are crossed.</p>
                     </div>
                 </div>
+                </a>
             </li>
         </ul>
     </div>
@@ -89,9 +97,6 @@
 {{ghost_foot}}
 
 {{! The main JavaScript file for Landscape }}
-<!-- <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script> -->
-<script type="text/javascript" src="{{asset "js/index.js"}}"></script>
-<script type="text/javascript" src="{{asset "js/small-menu.js"}}"></script>
 
 </body>
 </html>
