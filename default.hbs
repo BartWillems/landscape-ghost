@@ -20,29 +20,29 @@
 </head>
 <body class="{{body_class}}">
 
-<div id="menu">
-<nav role="navigation" class="site-navigation main-navigation">
-    <!-- <div class="menu-main-container"> -->
-    <ul id="menu-main" class="menu">
-        
-        <li>
-            {{#if @blog.logo}}
-                <img src="{{@blog.logo}}" alt="Blog Logo" style="max-height:16px;" />
-            {{/if}}
-            <a href="{{@blog.url}}">{{@blog.title}}</a>
-        </li>
-        <li>
-            <a href="#">BXL</a>
-        </li>
-    </ul>
-    <!-- </div> -->
-</nav><!-- .site-navigation .main-navigation -->
-</div><!-- #menu -->
-
 <!-- <header class="site-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
- -->
- <header class="site-head" style="background-image: url({{@blog.cover}})">    
- <div class="vertical">
+-->
+<header class="site-head" style="background-image: url({{@blog.cover}})"> 
+    <nav role="navigation" class="site-navigation main-navigation">
+        <!-- <div class="menu-main-container"> -->
+        <ul id="menu-main" class="menu">
+
+            <li>
+                {{#if @blog.logo}}
+                <img src="{{@blog.logo}}" alt="Blog Logo" style="max-height:16px;" />
+                {{/if}}
+                <a href="{{@blog.url}}">{{@blog.title}}</a>
+            </li>
+            <li>
+                <a href="#">BXL</a>
+            </li>
+        </ul>
+        <!-- </div> -->
+    </nav><!-- .site-navigation .main-navigation -->
+
+    {{#is "home"}}
+
+    <div class="vertical">
         <ul class="post-tags-holder">
             <li class="_post-tags">
                 <div class="tag-image">
@@ -66,30 +66,32 @@
                 </div>
             </li>
         </ul>
-
-
     </div>
+    {{/is}}
+
 </header>
 
-    {{! Everything else gets inserted here }}
-    {{{body}}}
+<div style="clear: both;"></div>
 
-    <footer class="site-footer">
-        <a class="subscribe icon-feed" href="{{@blog.url}}/rss/"><span class="tooltip">Subscribe!</span></a>
-        <div class="inner">
-             <section class="copyright">&copy; {{date
-             format="YYYY"}} <a href="{{@blog.url}}/">{{@blog.title}}</a>
-             </section>
-        </div>
-    </footer>
+{{! Everything else gets inserted here }}
+{{{body}}}
 
-    {{! Ghost outputs important scripts and data with this tag }}
-    {{ghost_foot}}
+<footer class="site-footer">
+    <a class="subscribe icon-feed" href="{{@blog.url}}/rss/"><span class="tooltip">Subscribe!</span></a>
+    <div class="inner">
+     <section class="copyright">&copy; {{date
+         format="YYYY"}} <a href="{{@blog.url}}/">{{@blog.title}}</a>
+     </section>
+ </div>
+</footer>
 
-    {{! The main JavaScript file for Landscape }}
-    <!-- <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script> -->
-    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
-    <script type="text/javascript" src="{{asset "js/small-menu.js"}}"></script>
+{{! Ghost outputs important scripts and data with this tag }}
+{{ghost_foot}}
+
+{{! The main JavaScript file for Landscape }}
+<!-- <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script> -->
+<script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+<script type="text/javascript" src="{{asset "js/small-menu.js"}}"></script>
 
 </body>
 </html>

@@ -523,24 +523,24 @@ margin on the iframe, cause it breaks stuff. */
     margin: 0 auto;
 }
 
-/* Centres vertically yo. (IE8+) */
-.vertical {
-    display: table-cell;
-    vertical-align: middle;
-}
+/*//* Centres vertically yo. (IE8+) */
+/*.vertical {*/
+    /*display: table-cell;*/
+    /*vertical-align: middle;*/
+/*}*/
 
 
 /* ==========================================================================
    4. General - The main styles for the the theme
-   ========================================================================== */
+   ========================================================================== 
 
 /* Big cover image on the home page */
 .site-head {
     position: relative;
-    display: table;
+    /*display: table;*/
     width: 100%;
-    height: 60%;
-    margin-bottom: 5rem;
+    height: 45px;
+    /*margin-bottom: 5rem;*/
     text-align: center;
     color: #fff;
     /*background: #000 url(../img/default-header.jpg) no-repeat center center;*/
@@ -844,7 +844,7 @@ margin on the iframe, cause it breaks stuff. */
 /* Stop .full-img from creating horizontal scroll - slight hack due to
    imperfections with browser width % calculations and rounding */
 .post-template .content {
-    overflow: hidden;
+    overflow: initial;
 }
 
 /* Tweak the .post wrapper style */
@@ -1201,8 +1201,8 @@ margin on the iframe, cause it breaks stuff. */
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         height: auto;
-        min-height: 240px;
-        padding: 15% 0;
+        min-height: 42px;
+        padding: 0 0;
     }
 
     .blog-title {
@@ -1274,7 +1274,7 @@ margin on the iframe, cause it breaks stuff. */
     }
 
     .site-head {
-        padding: 10% 0;
+        padding: 0 0;
     }
 
     .blog-title {
