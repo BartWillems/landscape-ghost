@@ -15,6 +15,8 @@
     {{! Styles'n'Scripts }}
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
 
+    <link href="https://fonts.googleapis.com/css?family=Alice" rel="stylesheet">
+
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
@@ -31,12 +33,18 @@
 
             <li>
                 {{#if @blog.logo}}
-                <img src="{{@blog.logo}}" alt="Blog Logo" style="max-height:16px;" />
+                <img src="{{@blog.logo}}" class="logo-nav" alt="Blog Logo"/>
                 {{/if}}
-                <a href="{{@blog.url}}">Fox&amp;Raven</a>
+                <a href="{{@blog.url}}">Fox<span class="ampersant">&nbsp;&amp;&nbsp;</span>Raven</a>
             </li>
             <li>
-                <a href="#">BXL</a>
+                <a href="/tag/bxl">BXL</a>
+            </li>
+            <li>
+                <a href="/tag/beauty">BEAUTY</a>
+            </li>
+            <li>
+                <a href="/tag/crossed-are-these-arms">My arms are crossed</a>
             </li>
         </ul>
         <!-- </div> -->
@@ -47,19 +55,10 @@
     <div class="vertical">
         <ul class="post-tags-holder">
             <li class="_post-tags">
-                <a href="/tag/we-want-you">
+                <a href="/tag/bxl">
                 <div class="tag-image">
                     <div class="tag-title-div" style="background: url(/assets/img/Serres-Royale.jpg);">
-                        <p class="tag-title-p">Serres Royales</p>
-                    </div>
-                </div>
-                </a>
-            </li>
-            <li class="_post-tags">
-                <a href="/tag/my-hands">
-                <div class="tag-image">
-                    <div class="tag-title-div" style="background: url(/assets/img/eXHEbisionist.png);">
-                        <p class="tag-title-p">Look at my hands!</p>
+                        <p class="tag-title-p">BXL</p>
                     </div>
                 </div>
                 </a>
@@ -68,7 +67,16 @@
                 <a href="/tag/crossed-are-these-arms">
                 <div class="tag-image">
                     <div class="tag-title-div" style="background: url(/assets/img/DrPhil__120910180727.jpg);">
-                        <p class="tag-title-p">My arms are crossed.</p>
+                        <p class="tag-title-p">Beauty</p>
+                    </div>
+                </div>
+                </a>
+            </li>
+            <li class="_post-tags">
+                <a href="/tag/travel">
+                <div class="tag-image">
+                    <div class="tag-title-div" style="background: url(/assets/img/eXHEbisionist.png);">
+                        <p class="tag-title-p">Travel</p>
                     </div>
                 </div>
                 </a>
@@ -78,8 +86,6 @@
     {{/is}}
 
 </header>
-
-<div style="clear: both;"></div>
 
 {{! Everything else gets inserted here }}
 {{{body}}}

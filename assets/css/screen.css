@@ -63,6 +63,20 @@ CUSTOM STYLING
    transform: rotateX(150deg);
  }*/
 
+.menu {
+    /*font-family: 'Helvetica';*/
+    font-family: 'Alice', serif;
+}
+
+.logo-nav {
+    height: 47px;
+    margin-bottom: -18px;
+}
+
+.ampersant {
+    font-size: large;
+}
+
 .tag-title {
     transition:0.5s ease;
     color: rgba(0,0,0,0);
@@ -94,12 +108,15 @@ CUSTOM STYLING
     line-height: 300px;
     background-color: rgba(0,0,0,0);
     transition:0.5s ease;
+    text-transform: uppercase;
 }
 
 .tag-title-p:hover {
     color: white;
     background-color: rgba(0,0,0,0.666);
 }
+
+
 
 
 /*
