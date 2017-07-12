@@ -5,12 +5,12 @@ the {body} of the default.hbs template, which contains our header/footer. }}
 
 {{! The big featured header on the homepage, with the site logo and description }}
 
-<header 
-    {{#is "home"}} 
-        class="site-head index-header" style="background-image: url({{@blog.cover}});background-repeat: repeat;background-size: inherit;"
-    {{else}}
-        class="site-head" 
-    {{/is}}> 
+
+{{#is "home"}} 
+<header class="site-head index-header" style="background-image: url({{@blog.cover}});background-repeat: repeat;background-size: inherit;">
+{{else}}
+<header class="site-head"> 
+{{/is}}
     <nav role="navigation" class="site-navigation main-navigation">
         <ul id="menu-main" class="menu">
             <li>
@@ -19,11 +19,13 @@ the {body} of the default.hbs template, which contains our header/footer. }}
                 {{/if}}
                 <a href="{{@blog.url}}">Fox<span class="ampersant">&nbsp;&amp;&nbsp;</span>Raven</a>
             </li>
+            {{#get "tags" limit="all"}}
             {{#foreach tags}}
             <li>
                 <a href="{{url}}" title="{{name}}">{{name}}</a>
             </li>
             {{/foreach}}
+            {{/get}}
             <li>
                 <a href="/contact">Contact</a>
             </li>
@@ -31,15 +33,16 @@ the {body} of the default.hbs template, which contains our header/footer. }}
         <!-- </div> -->
     </nav><!-- .site-navigation .main-navigation -->
 
+
     {{#is "home"}}
-    {{#if tags}}
+    {{#get "tags" limit="all"}}
     <div class="vertical">
         <ul class="post-tags-holder">
             {{#foreach tags}}
             <li class="_post-tags">
                 <a href="{{url}}" title="{{name}}">
                     <div class="tag-image">
-                        <div class="tag-title-div" style="background: url({{feature_image}});">
+                        <div class="tag-title-div" style="background: url({{image}});">
                             <p class="tag-title-p">{{name}}</p>
                         </div>
                     </div>
@@ -48,7 +51,7 @@ the {body} of the default.hbs template, which contains our header/footer. }}
             {{/foreach}}
         </ul>
     </div>
-    {{/if}}
+    {{/get}}
     {{/is}}
 
 </header>
@@ -56,6 +59,7 @@ the {body} of the default.hbs template, which contains our header/footer. }}
 {{! The main content area on the homepage }}
 <main class="content" role="main">
 
+{{tags}}
     {{! Each post will be output using this markup }}
     {{#foreach posts}}
 
