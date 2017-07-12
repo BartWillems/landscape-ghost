@@ -1,9 +1,57 @@
 {{!< default}}
 
 {{! The comment above "< default" means - insert everything in this file into
-    the {body} of the default.hbs template, which contains our header/footer. }}
+the {body} of the default.hbs template, which contains our header/footer. }}
 
 {{! The big featured header on the homepage, with the site logo and description }}
+
+<header 
+    {{#is "home"}} 
+        class="site-head index-header" style="background-image: url({{@blog.cover}});background-repeat: repeat;background-size: inherit;"
+    {{else}}
+        class="site-head" 
+    {{/is}}> 
+    <nav role="navigation" class="site-navigation main-navigation">
+        <ul id="menu-main" class="menu">
+            <li>
+                {{#if @blog.logo}}
+                <img src="{{@blog.logo}}" class="logo-nav" alt="Blog Logo"/>
+                {{/if}}
+                <a href="{{@blog.url}}">Fox<span class="ampersant">&nbsp;&amp;&nbsp;</span>Raven</a>
+            </li>
+            {{#foreach tags}}
+            <li>
+                <a href="{{url}}" title="{{name}}">{{name}}</a>
+            </li>
+            {{/foreach}}
+            <li>
+                <a href="/contact">Contact</a>
+            </li>
+        </ul>
+        <!-- </div> -->
+    </nav><!-- .site-navigation .main-navigation -->
+
+    {{#is "home"}}
+    {{#if tags}}
+    <div class="vertical">
+        <ul class="post-tags-holder">
+            {{#foreach tags}}
+            <li class="_post-tags">
+                <a href="{{url}}" title="{{name}}">
+                    <div class="tag-image">
+                        <div class="tag-title-div" style="background: url({{feature_image}});">
+                            <p class="tag-title-p">{{name}}</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            {{/foreach}}
+        </ul>
+    </div>
+    {{/if}}
+    {{/is}}
+
+</header>
 
 {{! The main content area on the homepage }}
 <main class="content" role="main">

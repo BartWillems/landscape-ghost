@@ -1,4 +1,10 @@
 {
-  "name": "Landscape - BW",
-  "version": "0.1.0"
+  "name": "landscape-bw",
+  "version": "0.1.6",
+  "url": "https://github.com/BartWillems/landscape-ghost",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/BartWillems/landscape-ghost.git"
+  }
 }
