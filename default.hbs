@@ -51,7 +51,7 @@
 
             {{#is "home"}}
             {{#get "tags" limit="all"}}
-            <div class="vertical">
+            {{!-- <div class="vertical"> --}}
                 <ul class="post-tags-holder">
                     {{#foreach tags}}
                     <li class="_post-tags">
@@ -65,7 +65,7 @@
                     </li>
                     {{/foreach}}
                 </ul>
-            </div>
+            {{!-- </div> --}}
             {{/get}}
             {{/is}}
 

@@ -11,7 +11,7 @@ header > nav {
 }
 
 header > nav > ul {
-    width: 1200px;
+    width: 1000px;
     margin: 0 auto 0 auto;
     list-style: none;
     -webkit-padding-start: 0;
@@ -44,5 +44,87 @@ header > nav > ul > li:last-child:after {
 }
 
 article {
-    max-width: 1200px;
+    max-width: 1000px !important;
 }
+
+.index-header {
+    height: 410px !important;
+}
+.post-tags-holder {
+    width: 960px;
+    margin: 0 auto;
+}
+
+._post-tags {
+    float: left;
+    margin-right: 30px;
+    list-style-type: none;
+    
+}
+
+._post-tags:hover {
+    
+}
+
+._post-tags:last-of-type {
+    margin-right: 0;
+}
+
+._post-tags > img {
+    max-height: 300px;
+}
+
+.logo-nav {
+    height: 47px;
+    margin-bottom: -18px;
+}
+
+.ampersant {
+    font-size: large;
+}
+
+.tag-title {
+    transition:0.5s ease;
+    color: rgba(0,0,0,0);
+    margin: 0;
+    height: 300px;
+    margin-top: -300px;
+    line-height: 320px;
+    background-color: rgba(0,0,0,0);
+}
+
+.tag-title:hover {
+    color: rgba(255,255,255,1);
+    background-color: rgba(50,50,50,0.25);
+}
+
+.tag-image {
+    height: 300px;
+    width: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.tag-image:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.tag-title-div {
+    height: 100%;
+    background-size: 100% auto !important;
+    background-position: center center !important;
+}
+.tag-title-p {
+    color: rgba(255,255,255,0);
+    height: 300px;
+    line-height: 300px;
+    background-color: rgba(0,0,0,0);
+    transition:0.5s ease;
+    text-transform: uppercase;
+}
+
+.tag-title-p:hover {
+    color: white;
+    background-color: rgba(0,0,0,0.666);
+}
+
