@@ -16,18 +16,21 @@ the {body} of the default.hbs template, which contains our header/footer. }}
         <header class="post-header">
             <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
 
-            <span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{tags prefix="on "}}</span>
+            {{!-- <span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{tags prefix="on "}}</span> --}}
 
         </header>
-        <section class="post-excerpt">
-            <p>{{excerpt}}&hellip;</p>
-        </section>
 
-        <section style="margin-top: 10px;">
+        <section style="margin-bottom: 10px;">
              {{#if feature_image}}
-                <div style="background: url({{img_url feature_image}})" class="feature_image"></div>
+                <a href="{{url}}"><img src="{{img_url feature_image}}" class="feature_image"></a>
             {{/if}}
         </section>
+
+        <section class="post-excerpt">
+            <a href="{{url}}"><p>{{excerpt}}&hellip;</p></a>
+        </section>
+
+        <span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span>
     </article>
 
     {{/foreach}}

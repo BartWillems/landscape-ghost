@@ -584,6 +584,7 @@ margin on the iframe, cause it breaks stuff. */
     text-transform:capitalize;
     text-align:center;
     font-weight: normal;
+    font-size: 64px;
 }
 
 .post-title a {
@@ -598,14 +599,13 @@ margin on the iframe, cause it breaks stuff. */
 
 .post-meta {
     display: block;
-    margin: 0 0 5px 0;
-    font-family: 'georgia', serif;
     color: #999;
     clear: both;
-    text-align:center;
-    font-family: georgia, serif;
+    text-align:left;
     font-style:italic;
-    margin:20px 0;
+    font-size: initial;
+    margin-top: 5px;
+    margin-bottom: 20px;
 }
 
 .post-meta a {
