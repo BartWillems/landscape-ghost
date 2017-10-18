@@ -24,8 +24,8 @@ the {body} of the default.hbs template, which contains our header/footer. }}
         </section>
 
         <section style="margin-top: 10px;">
-             {{#if image}}
-                <div style="background: url({{image}})" class="feature_image"></div>
+             {{#if feature_image}}
+                <div style="background: url({{img_url feature_image}})" class="feature_image"></div>
             {{/if}}
         </section>
     </article>

@@ -6,5 +6,8 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/BartWillems/landscape-ghost.git"
+  },
+  "author" : {
+    "email" : "bwillems@protonmail.com"
   }
 }
